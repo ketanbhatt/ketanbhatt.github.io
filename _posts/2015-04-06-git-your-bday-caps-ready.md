@@ -2,7 +2,7 @@
 title:	"Git Your B'Day Caps Ready!"
 date:	2015-04-07 17:20:20
 ---
-Introduction posts can wait, but a ten-year anniversary only comes once in a decade. And what better way to kick off your blog than to wish Git a very Happy Birthday? (No, don't even try suggesting me better ways!). But why? Because, for one thing, *Git* is what has made this website possible. I am very thankful to Linus Torvalds for creating something that has improved our lives as coders and maintainers.
+Introduction posts can wait, but a ten-year anniversary only comes once in a decade. And what better way to kick off your blog than to wish Git a very Happy Birthday? (No, don't even try suggesting better ways!). But why? Because, for one thing, *Git* is what has made this website possible. I am very thankful to Linus Torvalds for creating something that has improved our lives as coders and maintainers.
 
 I will admit that my first experience with Git was very frustrating. I was coding a [super simple website](http://www.supplyzone.in/ "SupplyZone") with a friend and we got stuck in a myriad of merge conflicts. They were so devastating that we ended up manually copying pasting the code and, as a result, had four Github repositories by the time we finished. Our mistake was that we went *pro* before even trying out Git on our own. 
 
