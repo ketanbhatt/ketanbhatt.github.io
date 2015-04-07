@@ -12,3 +12,13 @@ github_username:  ketanbhatt
 
 # Build settings
 markdown: kramdown
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: :title
