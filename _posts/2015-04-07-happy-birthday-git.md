@@ -1,6 +1,6 @@
 ---
 title:	"Git Your B'Day Caps Ready!"
-date:	2015-04-07 17:20:20
+date:	2015-04-07
 ---
 Introduction posts can wait, but a ten-year anniversary only comes once in a decade. And what better way to kick off your blog than to wish Git a very Happy Birthday? (No, don't even try suggesting better ways!). But why? Because, for one thing, *Git* is what has made this website possible. I am very thankful to Linus Torvalds for creating something that has improved our lives as coders and maintainers.
 
