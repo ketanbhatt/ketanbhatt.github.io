@@ -66,6 +66,6 @@ module.exports = router;
 {% endhighlight %}
 
 
-I struggled with it for quite some time when I needed to implement this feature in one of my projects. I hope it will help the community in the future.
+I struggled with it for quite some time when I needed to implement this feature in one of my projects. I hope it will help the community in future.
 
 Resources: [Multer](https://www.npmjs.com/package/multer), [S3FS](https://github.com/RiptideCloud/s3fs)
