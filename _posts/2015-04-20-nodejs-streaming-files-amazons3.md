@@ -27,7 +27,7 @@ s3fsImpl = new S3FS('your-bucket-here', {
 
 
 // POST a new Path 
-router.post('/', [ multer(), function(req, res, next) {
+router.post('/', [ multer(), function(req, res) {
 	var file = req.files.file;
 	console.log(file);
 
