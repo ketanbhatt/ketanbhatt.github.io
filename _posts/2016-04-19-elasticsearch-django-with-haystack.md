@@ -1,5 +1,5 @@
 ---
-title:	"Building Habits, with a lot of help from Github"
+title:	"Building Habits, with a lot of help from github"
 date:	2016-04-19
 ---
 I suck at habits. I start out a dozen different things every week, and I drop them as easily soon after. I needed to do something about it.
@@ -14,7 +14,7 @@ And the streak thing? I know that stuff has made me write code and push, sometim
 I decided I need that for my habits.
 
 ### So, what's the plan?
-I didn’t want to make a website for it as I wanted it to work offline as well. Plus building websites is so 2015, right? I was yearning for trying out something new and so decided to give [electron](http://electron.atom.io/) a go! It looked fun. Roped in Arpit ([__tigerapps](https://twitter.com/__tigerapps)), because doing it in a team makes everything fun.
+I didn’t want to make a website for it as I wanted it to work offline as well. Plus building websites is so 2015, right? I was yearning for trying out something new and so decided to give [electron](http://electron.atom.io/) a go! It looked fun. Roped in Arpit, because doing it in a team makes everything fun.
 
 We were going to ask the user the habits he needed to track, and done. You could +1 a habit after you do it and we update your chart. Sweet. No.
 
@@ -39,12 +39,11 @@ What has been done:
 
 - Adding habits using a form, persist in the database and displaying them
 - Displaying a heatmap
-- Making the "+" Button to commit a habit
 - Making a menu icon for the app
 
 What remains is:
 
-- Updating heatmap when "+" is pressed
+- Making the "+" Button to commit a habit
 - That redness thing for habits you must follow
 - UI touchup
 
