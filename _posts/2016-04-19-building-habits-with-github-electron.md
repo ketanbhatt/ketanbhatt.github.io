@@ -1,6 +1,7 @@
 ---
 title:	"Building Habits, with a lot of help from Github"
 date:	2016-04-19
+excerpt: Me and Arpit hacking our habit retention problem using Electron and free time. And taking a lot of inspiration from Github!
 ---
 I suck at habits. I start out a dozen different things every week, and I drop them as easily soon after. I needed to do something about it.
 I have used any.do (irritating), keep, inbox reminders, and many other lists. Nothing works for me.
@@ -33,7 +34,7 @@ So when you skip a habit from the second group, a red gradient gets added to you
 Well, we started this a month back, and then lost momentum (I got busy doing other awesome stuff at [SquadRun](https://squadrun.co/)). 
 Me and Arpit together have a Mac and a Linux machine between us, so this hasn't been tested on Windows.
 
-We would love to have somebody finish what we started. Here is the reposiotry: [ketanbhatt/habits](https://github.com/ketanbhatt/habits)
+We would love to have somebody finish what we started. Here is the repository: [ketanbhatt/habits](https://github.com/ketanbhatt/habits)
 
 What has been done:
 

@@ -5,11 +5,11 @@ date:	2015-04-20
 For any SaaS platform it is common to use a 3rd party hosting service for uploading files and serving them through a CDN. Amazon S3 is a common choice.
 
 Usually the file upload from the client side (say, AngluarJS) is sent to the server (node server running on GNU/Linux box) which is then forwarded to Amazon S3. This approach is inefficient because the file needs to be opened and "read" by the server and then forwarded to S3. The solution provided here 
-<ol>
-<li> Extracts all the meta data (file name, size, mime type) </li>
-<li> Opens a File stream to the Amazon S3 bucket </li>
-<li> And writes the file directly to it. </li>
-</ol>
+
+1. Extracts all the meta data (file name, size, mime type)
+2. Opens a File stream to the Amazon S3 bucket
+3. And writes the file directly to it.
+
 
 Snippet with comments :
 
@@ -68,4 +68,7 @@ module.exports = router;
 
 I struggled with it for quite some time when I needed to implement this feature in one of my projects. I hope it will help the community in future.
 
-Resources: [Multer](https://www.npmjs.com/package/multer), [S3FS](https://github.com/RiptideCloud/s3fs)
+Resources: 
+
+- [Multer](https://www.npmjs.com/package/multer)
+- [S3FS](https://github.com/RiptideCloud/s3fs)
