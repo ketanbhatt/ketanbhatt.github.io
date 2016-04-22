@@ -13,20 +13,20 @@ A problem our Operations Team at [SquadRun]() was facing was how slow the search
 We decided this needs to stop as it kills the team's effectiveness. So we planned to index those models which are frequently searched in an ElasticSearch (ES) server. We also needed a way to integrate ES with the django admin (because we do searches only from the admin). We had two options:
 
 1. Custom implementation for the search, and using ES APIs directly
-2. Something like [Haystack]() which handles all of this for you.
+2. Something like [Haystack](https://github.com/django-haystack/django-haystack) which handles all of this for you.
 
 It is advisable for you to directly deal with ES's API if you have something complex in your mind, or if you are an expert with ES (but then you wouldn't have been reading this). If your goal is just to do away with admin searches hitting your database, and want to plug in ES into the flow, I suggest haystack will serve you well. 
 
 
 ## Is that it?
-No, haystack hasn't been updated in a while and thus lacks a lot of features. Here are the problems we faced:
+No, haystack hasn't been updated in a while ([121](https://github.com/django-haystack/django-haystack/pulls) and [320](https://github.com/django-haystack/django-haystack/issues) open PRs and issues as of 22-04-2016) and thus lacks a lot of features. Here are the problems we faced:
 
-1. Updating index every time a row is added/updated is time taking, and sometimes updated happen in bulk (`MyModel.objects.filter(old_stuff=True).update(old_stuff=False)`), and this won't get updated in the index automatically.
-2. Defining what fields to index using templates takes me away from code, and every time I want to find what fields I am indexing, I will have to dig out the template file for the model. Cumbersome.
-3. Indexing was slow if you were indexing fields across tables.
-4. **No filter and ordering support** :(
-5. [This Problem](http://stackoverflow.com/questions/20430449/django-haystack-edgengramfield-given-different-results-than-elasticsearch)
-6. The `edgengram` tokenizer and filter's `min_gram` and `max_gram` were in the range 3-15, that meant words like `a, an, of` won't get indexed and a search for `King of Nepal` will not return anything because `of` is not in the index and so there is no match. We could ask our team to eliminate such words from their searches, but that is not just it is supposed to be done, we wanted to make their life easy, and not make them remember new rules.
+1. Updating index every time a row is added/updated is time taking, and sometimes updates happen in bulk (`MyModel.objects.filter(old_stuff=True).update(old_stuff=False)`), and this won't get updated in the index automatically. [Solution](#updating-index-asynchronously-and-indexing-everything-else-that-was-left)
+2. Defining what fields to index using templates takes me away from code, and every time I want to find what fields I am indexing, I will have to dig out the template file for the model. Cumbersome. [Solution](#make-haystack-templates-obsolete-and-faster-indexing)
+3. Indexing was slow if you were indexing fields across tables. [Solution](#make-haystack-templates-obsolete-and-faster-indexing)
+4. **No filter and ordering support** :( [Solution](#fix-filtering-and-ordering)
+5. [Django haystack EdgeNgramField gives different results than elasticsearch](http://stackoverflow.com/questions/20430449/django-haystack-edgengramfield-given-different-results-than-elasticsearch). [Solution](#solve-problem-i-cant-seem-to-find-a-name-for-and-modify-tokens-length)
+6. The `edgengram` tokenizer and filter's `min_gram` and `max_gram` were in the range 3-15, that meant words like `a, an, of` won't get indexed and a search for `King of Nepal` will not return anything because `of` is not in the index and so there is no match. We could ask our team to eliminate such words from their searches, but that is not just it is supposed to be done, we wanted to make their life easy, and not make them remember new rules. [Solution](#solve-problem-i-cant-seem-to-find-a-name-for-and-modify-tokens-length)
 
 
 ## All I see is complaints
@@ -35,7 +35,9 @@ Me too, here is what we did to solve them:
 ### Updating Index asynchronously And indexing everything else that was left
 This one is a no-brainer and is even suggested in haystack's docs. Use [celery-haystack](http://celery-haystack.readthedocs.org/en/latest/) to update index asynchronously. 
 (Gotcha! --> add `CELERY_HAYSTACK_COUNTDOWN = 2` to your settings, otherwise you are going to get a lot of `DoesNotExist` errors)
+
 So celery-haystack works by catching save/delete signals that django throws. Cool? Not yet. 
+
 What about updates/creates that happen in bulk? No signals are emitted for those and that would mean those things will never be indexed. This is not ideal. You can not stop updating/creating in bulk because of this.
 So, we decided to run a cron every 10 minutes that reindexes everything that was created/updated in the last 10 minutes.
 
