@@ -5,7 +5,7 @@ excerpt: How we used ElasticSearch and Haystack to power searches on our Django 
 ---
 **TLDR;** Use [squadrun/django-haystack](https://github.com/squadrun/django-haystack) and live your life happily. Also always index in batches. Also read the whole of it.
 
-A problem our Operations Team at [SquadRun]() was facing was how slow the searches on the Admin panel used to work. It wasn't surprising though. We had around _30 Million to 8 Hundred Thousand rows_ in different models. Now that is not a lot of data, but it is certainly a lot if you want to search on a lot of text and non-text fields simultaneously. We also didn't want our database to spend resources on the search queries. At a time when the database is already under load, these searches would:
+A problem our Operations Team at [SquadRun](https://squadrun.co/) was facing was how slow the searches on the Admin panel used to work. It wasn't surprising though. We had around _30 Million to 8 Hundred Thousand rows_ in different models. Now that is not a lot of data, but it is certainly a lot if you want to search on a lot of text and non-text fields simultaneously. We also didn't want our database to spend resources on the search queries. At a time when the database is already under load, these searches would:
 
 1. Return late
 2. Use even more resources of the db already under load
