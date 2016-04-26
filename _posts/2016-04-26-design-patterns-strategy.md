@@ -21,7 +21,7 @@ Define a family of algorithms, encapsulate each one, and make them interchangeab
 3. Program to interfaces, not implementations.
 
 ## When will I need it?
-So you are a developer and you are making a _Duck Simulator_ program. You are a nice person and so you use Inheritance. You have a `Duck` superclass that defines some attributes and methods. This class is inherited by other special `DuckType` classes. Like so:
+So you are a developer and you are making a _Duck Simulator_* program. You are a nice person and so you use Inheritance. You have a `Duck` superclass that defines some attributes and methods. This class is inherited by other special `DuckType` classes. Like so:
 
 {% highlight python %}
 class Duck(object):
@@ -168,4 +168,4 @@ Composition enables us to encapsulate related behavior together, allowing them t
 
 Also, anytime we have to add a new way of flying (`FlyWithRockets`), all we have to do is add a new child for `FlyBehavior` and chill.
 
-_All examples are taken from the [Head First Design Patterns](http://shop.oreilly.com/product/9780596007126.do)_
+*_All examples are taken from the [Head First Design Patterns](http://shop.oreilly.com/product/9780596007126.do)_
