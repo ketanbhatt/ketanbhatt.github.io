@@ -12,4 +12,5 @@ After a quick research I decided I donâ€™t want to start with the Gang of Fourâ€
 I picked up [Head First Design Patterns](http://shop.oreilly.com/product/9780596007126.do). It is a fun book recommended by many, and as I started it, I feel like it was the right decision. The authors aim to make the reader learn about the design patterns and then retain what they have learnt. They do this through simple but effective methods, rendering the book an interesting read in the process. I have decided to document what I learn so that it serves the dual purpose of being a quick reference for me and others, and for me to reinforce my learning.
 
 ## Posts in the series:
-1. [Preventing Rubber Ducks from Flying: Strategy Pattern]({% post_url 2016-04-26-design-patterns-strategy %})
+1. [Preventing Rubber Ducks from Flying: The Strategy Pattern]({% post_url 2016-04-26-design-patterns-strategy %})
+2. [AI and News Flashes: The Observer Pattern]({% post_url 2016-04-27-design-patterns-observer %})
