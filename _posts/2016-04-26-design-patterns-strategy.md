@@ -1,5 +1,5 @@
 ---
-title:	"Preventing Rubber Ducks from Flying: Strategy Pattern"
+title:	"Preventing Rubber Ducks from Flying: The Strategy Pattern"
 date:	2016-04-26
 excerpt: What do you do when the OO concepts you have abided by since your school days land you in trouble? You relearn them.
 ---
@@ -12,7 +12,6 @@ excerpt: What do you do when the OO concepts you have abided by since your schoo
 > -- -- <cite>Head First Design Patterns</cite>
 
 #### The Strategy Pattern: 
-
 Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from the clients that use it.
 
 #### Principles:
@@ -20,7 +19,7 @@ Define a family of algorithms, encapsulate each one, and make them interchangeab
 2. Favor composition over inheritance.
 3. Program to interfaces, not implementations.
 
-## When will I need it?
+## when will I need it?
 So you are a developer and you are making a _Duck Simulator_* program. You are a nice person and so you use Inheritance. You have a `Duck` superclass that defines some attributes and methods. This class is inherited by other special `DuckType` classes. Like so:
 
 {% highlight python %}
@@ -45,7 +44,7 @@ class RedheadDuck(Duck):
 
 `quack()` and `swim()` are implemented in the superclass while `display()` is implemented in the child classes as each duck looks different. 
 
-Now **you are asked to add a new feature, the ducks can now fly**. Because you used inheritance, you just added the method "fly()" to the superclass :D
+Now **you are asked to add a new feature, the ducks can now fly**. Because you used inheritance, you just added the method `fly()` to the superclass :D
 
 {% highlight python %}
 class Duck(object):
@@ -158,10 +157,10 @@ class Duck(object):
 
 And now we can call this method to set/modify flying behavior of a duck at runtime.
 
-## But the pattern [talks](#the-strategy-pattern) about algorithms?
+## but the pattern [talks](#the-strategy-pattern) about algorithms?
 See it like this: each set of behaviors (`FlyingBehavor` --> `FlyWithWings`, `FlyNoWay`) are like a family of algorithms, and they are _interchangeable_.
 
-## How did we benefit?
+## how did we benefit?
 We now have a _composition_. Instead of inheriting behaviors, our `Duck` classes are composed of the appropriate behavior classes. This is one of the points we mentioned in the [design principles](#principles).
 
 Composition enables us to encapsulate related behavior together, allowing them to be reused later. And also the behavior can be changed at runtime.
