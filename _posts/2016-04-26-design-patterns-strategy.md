@@ -44,7 +44,7 @@ class RedheadDuck(Duck):
 
 `quack()` and `swim()` are implemented in the superclass while `display()` is implemented in the child classes as each duck looks different. 
 
-Now **you are asked to add a new feature, the ducks can now fly**. Because you used inheritance, you just added the method `fly()` to the superclass :D
+Now **you are asked to add a new feature, the ducks can now fly**. Because you used inheritance, you just added the method `fly()` to the superclass :grin:
 
 {% highlight python %}
 class Duck(object):

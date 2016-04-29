@@ -22,3 +22,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+gems:
+  - jekyll-sitemap
+  - jemoji

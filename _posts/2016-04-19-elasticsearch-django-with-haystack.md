@@ -42,7 +42,7 @@ What about updates/creates that happen in bulk? No signals are emitted for those
 So, we decided to run a cron every 10 minutes that reindexes everything that was created/updated in the last 10 minutes.
 
 How did we know what happened in the last 10 minutes? We have an `updated_at` field in the models we are indexing, so that combined with haystack's [`update_index`](http://django-haystack.readthedocs.org/en/v2.4.1/management_commands.html#update-index) management command and its `age` parameter, we were able to achieve it. 
-Another problem. When we do a `queryset.update()` in django, `auto_now` fields are not updated. Now what? Now a little hack :D
+Another problem. When we do a `queryset.update()` in django, `auto_now` fields are not updated. Now what? Now a little hack :grin:
 
 {% highlight python %}
 def update_with_last_modified_time(qs, **kwargs):

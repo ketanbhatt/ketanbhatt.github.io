@@ -10,7 +10,7 @@ Define a one-to-many dependency between objects so that when one object changes 
 1. Strive for loosely coupled designs between objects that interact.
 
 ## when will I need it?
-So there is a smart "NewsGetter Machine". It fetches news from different sources on its own (these machines will one day start coding as well :X). This news is being consumed by two (for now) "Online Newspapers". You are given the task to implement a way for these newspapers to get the latest news as it comes and display it on their sites. The super intelligent AI guys who built the NewsGetter also implemented a `news_flash()` method. This method gets called every time the NewsGetter gets some new news.
+So there is a smart "NewsGetter Machine". It fetches news from different sources on its own (these machines will one day start coding as well :cry:). This news is being consumed by two (for now) "Online Newspapers". You are given the task to implement a way for these newspapers to get the latest news as it comes and display it on their sites. The super intelligent AI guys who built the NewsGetter also implemented a `news_flash()` method. This method gets called every time the NewsGetter gets some new news.
 
 _Oh, also, there is a 100% chance of more newspapers starting to use the **NewsGetter Machine** as their primary source of news (because AI is the future)._
 
