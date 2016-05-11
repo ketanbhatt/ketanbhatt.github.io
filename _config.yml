@@ -2,13 +2,12 @@
 title: Ketan Bhatt
 email: ketanbhatt1006@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A diary of sorts for all that I like about web development, and a journal
-  that covers my experiments, failed or successful. Looking forward to
-  interact with the community, let's have a good time!
+  Space where I put my learnings in the tech field
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ketanbhatt.github.io" # the base hostname & protocol for your site
 twitter_username: ktnbhtt
 github_username:  ketanbhatt
+author: ketanbhatt
 
 # Build settings
 markdown: kramdown
@@ -26,3 +25,4 @@ defaults:
 gems:
   - jekyll-sitemap
   - jemoji
+  - jekyll-seo-tag
