@@ -153,6 +153,7 @@ GEM
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
     kramdown (1.13.2)
+    leonids (0.2.1)
     liquid (3.0.6)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
@@ -195,7 +196,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.6)
-  minima (~> 2.0)
+  jemoji
+  leonids
   tzinfo-data
 
 BUNDLED WITH

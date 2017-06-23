@@ -26,9 +26,35 @@ author: ketanbhatt
 # Build settings
 permalink: /:title
 markdown: kramdown
-theme: jekyll-theme-modernist
+theme: leonids
 gems:
   - jekyll-feed
+  - jemoji
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      comments: true
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: ketanbhatt
+  bio: "random musings and learnings"
+  email: "ketanbhatt1006@gmail.com"
+  disqus-shortname: ketanbhatt
+  twitter: _ketanbhatt
+  google:
+    analytics: "UA-61647345-1"
+  github: ketanbhatt
+  instagram: _ketanbhatt
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
