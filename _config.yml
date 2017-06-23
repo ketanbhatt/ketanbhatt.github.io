@@ -26,3 +26,4 @@ gems:
   - jekyll-sitemap
   - jemoji
   - jekyll-seo-tag
+theme: jekyll-theme-modernist
