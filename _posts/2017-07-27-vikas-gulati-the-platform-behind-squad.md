@@ -1,5 +1,5 @@
 ---
-title:	"Vikas Gualti - The Platform behind Squad's Platform"
+title:	"Vikas Gulati - The Platform behind Squad's Platform"
 date:	2017-07-27
 excerpt: "Just me fanboying about my mentor, with the sole purpose of getting more page views on my sad blog when he becomes famous."
 ---
@@ -20,13 +20,13 @@ As SquadRun grew, he magically started to handle all the new problems that come 
 All this, and you will never see him go out and about beating his chest for something he did that solved a huge pain (I can't say that about myself!).
 
 
->If Vikas was in cricket, Rahul Dravid would have just been called the fence or something. Because VG is the wall.  
+>If VG was in cricket, Rahul Dravid would have just been called the fence or something. Because VG is the wall.  
 ~ _Ketan Bhatt, giver of bad analogies_
 
 He doesn't break. He is been at it for ~3 years. Constantly taking on new challenges, preparing/learning for them, anticipating some of them before they even come, constantly growing and constantly inspiring. **24*7**.  
 I haven't met anyone who is so open to being a better version of himself every day. He is constantly experimenting. With routines, processes, books, food. What not!
  
-And now, after I have left SquadRun (because of personal reasons), leaving the team with a bandwidth crunch, VG has again risen up to the occasion and is handling all the extra pressure with a smile. Even then, when I asked him to take a look at one of the companies I was interviewing with, he took out time to read up about the company and share what he felt. And that's when I realised again, he is Gold. 
+And now, after I have left SquadRun, leaving the team with a bandwidth crunch, VG has again risen up to the occasion and is handling all the extra pressure with a smile. Even then, when I asked him to take a look at one of the companies I was interviewing with, he took out time to read up about the company and share what he felt. And that's when I realised again, he is Gold. 
 
 I will just stop here because I am feeling better now. You praise us a lot for a small bug we could fix quickly, or a design we could think in and out of. But you need to be praised properly too. **You have changed a lot of lives. Keep at it.**
 
